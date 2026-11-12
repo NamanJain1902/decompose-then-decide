@@ -63,10 +63,10 @@ Both factors are estimated directly from SWE-bench gold patches and a single eva
 To separate **synergy** from a merely **additive** result, we define an analytical additive baseline:
 
 $$
-B5 = \sigma\!\left(\operatorname{logit}(B2) + \operatorname{logit}(B3) - \operatorname{logit}(B1)\right)
+B5 = \sigma\left(\ln\frac{B2}{1-B2} + \ln\frac{B3}{1-B3} - \ln\frac{B1}{1-B1}\right)
 $$
 
-and require $B4 - B5 > \delta$ (95th percentile of a bootstrap over five seeds) before claiming the cycle is operating.
+where $\sigma(x) = 1/(1+e^{-x})$. The three $\ln\frac{p}{1-p}$ terms are the log-odds of each baseline; B5 encodes the null hypothesis that the decomposed-harness gain and the FGL gain add on the log-odds scale with no interaction — i.e., that $S(B4) = S(B2)$ and $L(B4) = L(B3)$.
 
 ## Hypotheses
 
