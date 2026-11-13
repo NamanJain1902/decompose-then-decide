@@ -118,12 +118,15 @@ pdflatex main.tex   # twice, for references
 ## Citation
 
 ```bibtex
-@misc{jain2026decompose,
-  title  = {Decompose, Then Decide: A Fixer-Guided Harness for Reliable Offline Code Repair with Gemma 4 E4B},
-  author = {Jain, Naman},
-  year   = {2026},
-  note   = {Submission to the Gemma 4 Developer Agent Competition, Paper Track},
-  url    = {https://github.com/NamanJain1902/decompose-then-decide}
+@article{naman_jain_2026,
+	title={Decompose,
+	Then Decide},
+	url={https://www.kaggle.com/w/125832},
+	DOI={10.34740/KAGGLE/W/125832},
+	journal={Kaggle},
+	publisher={Kaggle},
+	author={Naman Jain},
+	year={2026}
 }
 ```
 
